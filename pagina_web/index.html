@@ -5,20 +5,21 @@
         <title>Pagina web sencilla</title>
         <style>
             table {
-              border-collapse: collapse;
+              border: 1px solid;
             }
-            td, th{
+            td{
               border: 1px solid;
               text-align: left;
               padding: 8px;
-            }
-            th {
-                background-color: #ccf5ff
+              font-weight: bold;
             }
         </style>
     </head>
     <body>
+    <header>
         <h1>Página de prueba muy fea</h1>
+    </header>
+    <main>
         <p style="color:#FF0000; font-size:40px;">Esto está a un tamaño de 40px y de color #FF0000 rojo</p>
         <p style="font-size: small;">Esto está a un tamaño small</p>
         <p style="font-size: medium;">Esto está a un tamaño medium</p>
@@ -26,21 +27,54 @@
         <p style="font-size: xx-small;">Esto está a un tamaño xx-small</p>
         <p style="font-size: 2%; color:blue;">Esto está a un tamaño 2% y de color azul</p>
         <table>
+            <colgroup>
+                <col span="0" style="background-color:#ccf5ff">
+            </colgroup>
             <tr>
-                <th>Celda 1</th>
+                <td>Celda 1</td>
                 <td>Celda 2</td>
                 <td>Celda 3</td>
             </tr>
             <tr>
-                <th>Celda 4</th>
+                <td>Celda 4</td>
                 <td>Celda 5</td>
                 <td>Celda 6</td>
             </tr>
             <tr>
-                <th>Celda 7</th>
+                <td>Celda 7</td>
                 <td>Celda 8</td>
                 <td>Celda 9</td>
             </tr>
+            <tr>
+                <td>Celda 10</td>
+                <td>Celda 11</td>
+                <td>Celda 12</td>
+            </tr>
+            <tr>
+                <td>Celda 13</td>
+                <td>Celda 14</td>
+                <td>Celda 15</td>
+            </tr>
         </table>
+        <p>Diarios de:</p>
+        <ol type="1">
+            <li>ESPAÑA...
+                <ol type="a">
+                    <li><a href="https://www.elmundo.es/">El Mundo</a></li>
+                    <li><a href="https://elpais.com/">El País</a></li>
+                    <li><a href="https://www.lavanguardia.com/">La Vanguardia</a></li>
+                </ol>
+            </li>
+            <li>EE.UU.
+                <ol type="I">
+                    <li><a href="https://www.nytimes.com/international/">New York Times</a></li>
+                    <li><a href="https://www.washingtonpost.com/">The Washington Post</a></li>
+                </ol>
+            </li>
+        </ol>
+    </main>
+    <footer>
+        <img src="pato.jpeg">
+    </footer>
     </body>
 </html>
