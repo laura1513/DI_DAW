@@ -2,20 +2,95 @@
 <html lang="es">
     <head>
         <style>
-           #contenedor {
-                display: grid;
-           }
-           h2 {
-                grid-row: 1;
-           }
-           li:hover {
-                background-color: rgb(255, 255, 153);
-           }
-            label:first-child{
-                font-size: 20px;
+            #contenedor {
+              border: 1px solid grey;
+              margin: 1em auto;
+              padding: 1em;
+            }
+            .izquierda, .derecha {
+                float: none;
+                width: auto;
+            }
+            ul li div span.completo {
+              width: 100%;
+            }
+
+            ul li div span.mitad {
+              width: 50%;
+            }
+
+            ul li div span.tercio {
+              width: 33%;
+            }
+
+            ul li div span.dostercios {
+              width: 66%;
+            }
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            li {
+                margin: 0.5em 0;
+                padding: 0.5em;
+                width: 46%;
+                overflow: hidden;
+                position: relative;
+            }
+            label.titulo {
+                font-weight: bold;
+                float: left;
+                width: 100px;
             }
             .requerido {
                 color: red;
+                font-weight: bold;
+            }
+            .botones {
+              border-top: 2px solid #CCC;
+              clear: both;
+              float: none;
+              padding: 1em 0;
+              margin-top: 1em;
+              text-align: right;
+              width: 100%;
+            }
+            ul li div {
+              margin-left: 160px;
+            }
+            span {
+              float: left;
+              padding: 0.3em 0;
+            }
+            ul li div span label {
+              display: block;
+              font: normal 0.8em;
+            }
+            .ayuda {
+              display: none;
+            }
+
+            ul li input {
+              padding: 0.2em;
+            }
+
+            li:hover {
+              background-color: #FF9;
+            }
+            .botones:hover {
+              background-color: transparent;
+            }
+            input:focus {
+              border: 2px solid #E6B700;
+            }
+            ul li:hover p.ayuda {
+              display: block;
+              margin: 0.3em;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 150px;
             }
         </style>
     </head>
@@ -30,18 +105,17 @@
                         </label>
                         <div>
                             <span class="completo">
-                                <input id="nombre" name="nombre" value=""/><br>
-                                <label for="nombre">Nombre</label><br>
+                              <input id="nombre" name="nombre" value="" />
+                              <label for="nombre">Nombre</label>
                             </span>
 
                             <span class="completo">
-                                <input id="apellido1" name="apellido1" value=""/><br>
-                                <label for="apellido1">Primer apellido</label><br>
+                                <input id="apellido1" name="apellido1" value="" />
+                                <label for="apellido1">Primer apellido</label>
                             </span>
-
                             <span class="completo">
-                                <input id="apellido2" name="apellido2" value=""/><br>
-                                <label for="apellido2">Segundo apellido</label><br>
+                                <input id="apellido2" name="apellido2" value="" />
+                                <label for="apellido2">Segundo apellido</label>
                             </span>
                         </div>
 
@@ -52,41 +126,39 @@
                         <label class="titulo" for="direccion">Direccion
                             <span class="requerido">*</span>
                         </label>
-
                         <div>
                             <span class="completo">
-                                <input id="direccion" name="direccion" value=""/><br>
-                                <label for="direccion">Calle, numero, piso, puerta</label><br>
+                              <input id="direccion" name="direccion" value="" />
+                              <label for="direccion">Calle, numero, piso, puerta</label>
                             </span>
-
                             <span class="tercio">
-                                <input id="codigopostal" name="codigopostal" value=""/><br>
-                                <label for="codigopostal">Codigo postal</label><br>
+                              <input id="codigopostal" name="codigopostal" value="" />
+                              <label for="codigopostal">Codigo postal</label>
                             </span>
 
                             <span class="dostercios">
-                                <input id="municipio" name="municipio" value=""/><br>
-                                <label for="municipio">Municipio</label><br>
+                              <input id="municipio" name="municipio" value="" />
+                              <label for="municipio">Municipio</label>
                             </span>
 
                             <span class="tercio">
-                                <select id="provincia" name="provincia">
-                                    <option value=""></option>
-                                    <option value="provincia1">Provincia 1</option>
-                                    <option value="provincia2">Provincia 2</option>
-                                    <option value="provincia3">Provincia 3</option>
-                                </select><br>
-                                <label for="provincia">Provincia</label><br>
+                              <select id="provincia" name="provincia">
+                                <option value=""></option>
+                                <option value="provincia1">Provincia 1</option>
+                                <option value="provincia2">Provincia 2</option>
+                                <option value="provincia3">Provincia 3</option>
+                              </select>
+                              <label for="provincia">Provincia</label>
                             </span>
 
                             <span class="dostercios">
-                                <select id="pais" name="pais">
-                                    <option value=""></option>
-                                    <option value="pais1">Pais 1</option>
-                                    <option value="pais2">Pais 2</option>
-                                    <option value="pais3">Pais 3</option>
-                                </select><br>
-                                <label for="pais">Pais</label><br>
+                              <select id="pais" name="pais">
+                                <option value=""></option>
+                                <option value="pais1">País 1</option>
+                                <option value="pais2">País 2</option>
+                                <option value="pais3">País 3</option>
+                              </select>
+                              <label for="pais">Pais</label>
                             </span>
                         </div>
 
@@ -95,10 +167,9 @@
 
                     <li class="izquierda">
                         <label class="titulo" for="email">Email</label>
-
                         <div>
                             <span class="completo">
-                                <input id="email" name="email" value=""/>
+                              <input id="email" name="email" value="" />
                             </span>
                         </div>
 
@@ -106,17 +177,19 @@
                     </li>
 
                     <li class="derecha">
-                        <label class="titulo" for="telefonofijo">Telefono <span class="requerido">*</span></label>
+                        <label class="titulo" for="telefonofijo">Telefono
+                            <span class="requerido">*</span>
+                        </label>
 
                         <div>
                             <span class="mitad">
-                                <input id="telefonofijo" name="telefonofijo" value=""/><br>
-                                <label for="telefonofijo">Fijo</label><br>
+                              <input id="telefonofijo" name="telefonofijo" value="" />
+                              <label for="telefonofijo">Fijo</label>
                             </span>
 
                             <span class="mitad">
-                                <input id="telefonomovil" name="telefonomovil" value=""/><br>
-                                <label for="telefonomovil">Movil</label>
+                              <input id="telefonomovil" name="telefonomovil" value="" />
+                              <label for="telefonomovil">Movil</label>
                             </span>
                         </div>
 
@@ -124,10 +197,12 @@
                     </li>
 
                     <li class="botones">
-                        <input id="alta" type="submit" value="Darme de alta &rarr;"/>
+                        <input id="alta" type="submit" value="Darme de alta &rarr;" />
                     </li>
+
                 </ul>
             </form>
+
         </div>
     </body>
 </html>
