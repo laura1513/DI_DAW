@@ -1,0 +1,7 @@
+el :root es un selector css que te permite manejar el nodo principal de un documento
+el elemento con la clase .loader tiene un tamaño del 50% sobre el padre, cada elemento tendrá un radio del 100%
+cuyo tamaño del borde y color están definidos en el selector :root
+cada hijo tiene una animacion ease-in-out que tarda en activarse 2s respecto a la anterios durante un periodo de
+tiempo infinito
+
+el boton tiene una animacion sacudir en la cual se transforma en cada momento y rota en diferentes angulos
