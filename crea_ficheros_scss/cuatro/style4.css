@@ -1,0 +1,17 @@
+body {
+  background-color: lightgreen;
+  color: darkgreen;
+  font-size: 18px;
+}
+
+nav ul {
+  list-style-type: square;
+}
+nav p {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #ff472f;
+}
+
+/*# sourceMappingURL=style4.css.map */

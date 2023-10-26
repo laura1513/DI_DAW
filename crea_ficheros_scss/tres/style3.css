@@ -1,0 +1,9 @@
+nav ul {
+  list-style-type: square;
+}
+nav p {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  color: #ff472f;
+}
