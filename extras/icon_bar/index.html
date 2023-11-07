@@ -4,17 +4,88 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div class="icon-bar">
-        <a class="active" href="#">
+    <div class="icon-bar w3-top w3-bar">
+        <a class="active" href="#home">
             <i class="fa fa-home"></i>
         </a>
-        <a href="#"><i class="fa fa-search"></i></a>
-        <a href="#"><i class="fa fa-envelope"></i></a>
-        <a href="#"><i class="fa fa-globe"></i></a>
+        <a href="#about"><i class="fa fa-search"></i></a>
+        <a href="#members"><i class="fa fa-user-circle"></i></a>
+        <a href="#contact"><i class="fa fa-envelope"></i></a>
+    </div>
+    <div id="home" class="w3-content">
+
+        <img class="slides" src="oneDirection1.jpeg" width="100%">
+        <img class="slides" src="oneDirection2.jpeg" width="100%">
+        <img class="slides" src="oneDirection3.jpeg" width="100%">
+        <script>
+            w3.slideshow(".slides", 1500);
+        </script>
+
+        <div id="about" class="w3-container w3-padding-32">
+            <h1 class="w3-center">One Direction</h1>
+            <p>One Direction fue una boy band británico-irlandesa formada en 2010 en Londres, en el programa The X Factor. Durante la transmisión del concurso, el grupo fue apadrinado por Simon Cowell. Su formación se dio luego de que los integrantes hicieran sus audiciones y fueran expulsados de la competencia. Tras esto, Nicole Scherzinger, una de las juezas, sugirió que formasen parte de un grupo, al que finalmente llamaron One Direction. El grupo finalmente quedó en el tercer lugar del concurso, pero aun así Cowell pagó un contrato discográfico con Syco Music para que pudiesen lanzar un disco. El 25 de marzo de 2015 la banda anunció la salida de Malik del grupo. El 6 de noviembre del mismo año, se estrenó el tercer y último sencillo hasta hora de la banda.Tras la publicación del álbum, el grupo comenzó una pausa indefinida</p>
+            <ul>Discos:
+                <li>Up All Night (2011)</li>
+                <li>Take Me Home (2012)</li>
+                <li>Midnight Memories (2013)</li>
+                <li>Four (2014)</li>
+                <li>Made in the AM (2015)</li>
+            </ul>
+        </div>
+
+        <div id="members" class="w3-container w3-padding-32">
+            <h2 class="w3-center">Band Members</h2>
+            <div class="w3-row w3-center">
+                <div class="w3-half">
+                    <div class="w3-third">
+                        <img src="niall.jpeg" alt="Niall" style="width:75%"><br>
+                        <a href="https://www.niallhoran.com/#/">Niall Horan</a>
+                    </div>
+
+                    <div class="w3-third">
+                        <img src="harry.jpeg" alt="Harry" style="width:75%"><br>
+                        <a href="https://hstyles.co.uk/">Harry Styles</a>
+                    </div>
+
+                    <div class="w3-third">
+                        <img src="louis.jpeg" alt="Louis" style="width:75%"><br>
+                        <a href="https://louis-tomlinson.com/">Louis Tomlinson</a>
+                    </div>
+                </div>
+                <div class="w3-half">
+                    <div class="w3-half">
+                        <img src="liam.jpeg" alt="Liam" style="width:50%"><br>
+                        <a href="https://www.liampayneofficial.com/">Liam Payne</a>
+                    </div>
+                    <div class="w3-half">
+                        <img src="zayn.jpeg" alt="Zayn" style="width:50%"><br>
+                        <a href="https://www.inzayn.com/">Zayn Malik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="w3-container w3-center w3-padding-32">
+            <h2 class="w3-wide">CONTACT</h2>
+            Londres, UK<br>
+            Phone: +00 151515<br>
+            Email: mail@mail.com<br>
+            <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+
+            <form action="/action_page.php" target="_blank">
+                <input class="w3-input" type="text" placeholder="Name" required name="Name">
+                <input class="w3-input" type="text" placeholder="Email" required name="Email">
+                <input class="w3-input" type="text" placeholder="Message" required name="Message"><br>
+                <button class="w3-button w3-black" type="submit">SEND</button>
+            </form>
+        </div>
+
     </div>
 </body>
 </html>
