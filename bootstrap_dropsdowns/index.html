@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ejercicio Bootstrap: dropsdowns, nav...</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="navbar-brand">
+                    <img src="logo_correcte.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dropdowns</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Collapse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Navbar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h2>Esta es una prueba de una página web</h2>
+        <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">Muestra/Oculta el texto</button>
+        <div id="demo" class="collapse">
+            Una Página Web es un documento electrónico que forma parte de la WWW (World Wide Web) generalmente construido en lenguaje HTML (Hyper Text Markup
+            Language o Lenguaje de Marcado de Hipertexto) ó en XHTML (eXtensible Hyper Text Markup
+            Language o Lenguaje de Marcado de Hipertexto Extensible)
+        </div>
+        <div id="accordion">
+            <h2>Tecnologías</h2>
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseOne">
+                        HTML
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-dark">
+                        El Lenguaje de Marcado de Hipertexto (HTML) es el código que se utiliza para estructurar
+                        y desplegar una página web y sus contenidos. Por ejemplo, sus contenidos porían ser párrafos,
+                        una lista con viñetas, o imágenes y tablas de datos.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn btn-info" data-bs-toggle="collapse" href="#collapseTwo">
+                        CSS
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-info">
+                        CSS son las siglas en inglés para "hojas de estilo en cascada" (Cascading Style Sheets). Básicamente, es un lenguaje que
+                        maneja el diseño y presentación de las páginas web, es decir, cómo lucen cuando un usuario las visita. Funciona junto con
+                        el lenguaje HTML que se encarga del contenido básico de los sitios. Se les denomina hojas de estilo "en cascada" porque puedes
+                        tener varias y una de ellas con las propiedades heredadas (o "en cascada") de otras. Para muchas personas, una simple plantilla
+                        de blog es suficiente. Aun así, cuando quieras personalizar la apariencia de un sitio, necesitarás implementar CSS que, en conjunto
+                        con un buen CMS, te ayudará a potenciar el alcance de tu contenido
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseThree">
+                        JavaScript
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                    <div class="card-body text-warning">
+                        JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web,
+                        cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido,
+                        mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente
+                        JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales (HTML y CSS) hemos cubierto
+                        con mucho más detalle en otras partes del Área de aprendizaje.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Ejemplos</h2>
+        <p>Haz click sobre el botón para acceder a los enlaces a diversos ejemplos de páginas web</p>
+        <div class="dropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                Ejemplos web
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://www.pennyjuice.com/">Link 1</a></li>
+                <li><a class="dropdown-item" href="https://www.louvre.fr/en/online-tours">Link 2</a></li>
+                <li><a class="dropdown-item" href="https://www.lingscars.com/">Link 3</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
