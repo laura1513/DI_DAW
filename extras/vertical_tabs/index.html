@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vertical tabs</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        <button class="tablinks" onclick="openCity(event, 'Madrid')">Madrid</button>
+        <button class="tablinks" onclick="openCity(event, 'Moscu')">Moscu</button>
+        <button class="tablinks" onclick="openCity(event, 'Roma')">Roma</button>
+        <button class="tablinks" onclick="openCity(event, 'Berlin')">Berlin</button>
+        <button class="tablinks" onclick="openCity(event, 'Kiev')">Kiev</button>
+        <button class="tablinks" onclick="openCity(event, 'Varsovia')">Varsovia</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>Londres es la capital de Inglaterra</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris es la capital de Francia</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>TRokio es la capital de Japón</p>
+    </div>
+    <div id="Madrid" class="tabcontent">
+        <h3>Madrid</h3>
+        <p>Madrid es la capital de España</p>
+    </div>
+    <div id="Moscu" class="tabcontent">
+        <h3>Moscu</h3>
+        <p>Moscu es la capital de Rusia</p>
+    </div>
+    <div id="Roma" class="tabcontent">
+        <h3>Roma</h3>
+        <p>Roma es la capital de Italia</p>
+    </div>
+    <div id="Berlin" class="tabcontent">
+        <h3>Berlin</h3>
+        <p>Berlin es la capital de Alemania</p>
+    </div>
+    <div id="Kiev" class="tabcontent">
+        <h3>Kiev</h3>
+        <p>Kiev es la capital de Ucrania</p>
+    </div>
+    <div id="Varsovia" class="tabcontent">
+        <h3>Varsovia</h3>
+        <p>Varsovia es la capital de Polonia</p>
+    </div>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
