@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <title>Laura Jorques</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <style>
+        .logo {
+            height: 150px;
+        }
+        .img {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="p-5 text-white text-center" style="background-color: mediumpurple">
+    <h1>Laura Jorques</h1>
+    <p>Bootstrap template</p>
+</div>
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #800075">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Index</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carrusel.html">Carrusel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="formulario.html">Formulario de contacto</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="w3-content">
+    <div id="contact" class="w3-container w3-center mt-5">
+        <h2 class="w3-wide">CONTACT</h2>
+        Mi casa, Cualquier lugar<br>
+        Numero: +00 123 456 789<br>
+        Correo: mail@mail.com<br>
+
+        <form target="_blank">
+            <input class="w3-input" type="text" placeholder="Nombre" required name="Nombre">
+            <input class="w3-input" type="text" placeholder="Apellidos" required name="Apellidos">
+            <input class="w3-input" type="number" placeholder="Telefono" required name="Telefono">
+            <input class="w3-input" type="email" placeholder="Correo" required name="Correo">
+        </form>
+        <div class="container mt-3">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal">
+                SEND
+            </button>
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">Se han enviado tus datos a la oficina de contacto.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<div class="mt-5 p-4 text-white text-center" style="background-color: mediumpurple">
+    <p>Laura Jorques Trenco &#169</p>
+    <p>2DAW Diseño de interfaces</p>
+    <p>23-11-2023</p>
+    <img src="imagenes/logo_correcte.png" alt="Avatar Logo" style="width:40px;">
+    <img src="imagenes/cv.jpg" alt="Avatar Logo" style="width:40px;">
+    <img src="imagenes/ue.jpg" alt="Avatar Logo" style="width:40px;">
+</div>
+
+</body>
+</html>
