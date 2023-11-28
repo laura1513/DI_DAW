@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Louis Tomlinson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <style>
+        #logo:hover {
+            animation-name: rotarlogo;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotarlogo {
+            0%{transform: rotate(-360deg)}
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbar">
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: darkred">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/logo.png" alt="Logo" style="width:60px;" id="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Louis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#store">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#music">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tour">Tour</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="demo1" class="carousel slide mt-5 " data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo1" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo1" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#demo1" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="imagenes/louis1.jpg" alt="Louis1" class="d-block" style="width:400px; height: 400px">
+                </div>
+                <div class="item">
+                    <img src="imagenes/louis2.jpeg" alt="Louis2" class="d-block" style="width:400px; height: 400px">
+                </div>
+                <div class="item">
+                    <img src="imagenes/louis3.jpg" alt="Louis3" class="d-block" style="width:400px; height: 400px">
+                </div>
+                <div class="carousel-item active">
+                    <img src="imagenes/louis4.jpg" alt="Louis4" class="d-block" style="width:400px; height: 400px">
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div id="about">
+                <h2>About Louis</h2>
+                <p>Louis William Tomlinson was born on December 24, 1991 in Doncaster, England.</p>
+        </div>
+    </div>
+</body>
+</html>
