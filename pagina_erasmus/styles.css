@@ -101,3 +101,15 @@ body {
 footer {
     margin-top: auto
 }
+.mapouter{
+    position: relative;
+    text-align: center;
+    height: 560px;
+    width: 700px;
+}
+.gmap_canvas{
+    overflow: hidden;
+    background: none !important;
+    height: 560px;
+    width: 700px;
+}
