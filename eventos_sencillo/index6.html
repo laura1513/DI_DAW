@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Ratón</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var miElemento = document.getElementById('miElemento');
+
+            miElemento.addEventListener('mouseover', handleMouseOver);
+            miElemento.addEventListener('mouseout', handleMouseOut);
+            miElemento.addEventListener('mousedown', handleMouseDown);
+            miElemento.addEventListener('mouseup', handleMouseUp);
+            miElemento.addEventListener('mousemove', handleMouseMove);
+            miElemento.addEventListener('contextmenu', handleContextMenu);
+
+            function handleMouseOver() {
+                alert('¡Mouse sobre el elemento!');
+            }
+
+            function handleMouseOut() {
+                alert('¡Mouse fuera del elemento!');
+            }
+
+            function handleMouseDown() {
+                alert('¡Click izquierdo sobre el elemento!');
+            }
+
+            function handleMouseUp() {
+                alert('¡Click izquierdo liberado sobre el elemento!');
+            }
+
+            function handleMouseMove() {
+                alert('¡Mouse movido sobre el elemento!');
+            }
+
+            function handleContextMenu(event) {
+                event.preventDefault();
+                alert('¡Menú contextual activado sobre el elemento!');
+            }
+        });
+    </script>
 </head>
 <body>
-
+<div id="miElemento">
+    ¡Haz clic o pasa el mouse sobre mí!
+</div>
 </body>
 </html>
