@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        div{ width: 100px; height:100px;}
-    </style>
-    <script type="text/javascript">
-        let bloqueAnterior = '';
-
-        function detectarEntrada(color) {
-            let mensaje = '';
-
-            if (bloqueAnterior === 'rojo' && color === 'blanco') {
-                mensaje = 'Entraste desde el bloque rojo al bloque blanco';
-            } else if (bloqueAnterior === 'azul' && color === 'blanco') {
-                mensaje = 'Entraste desde el bloque azul al bloque blanco';
-            } else {
-                mensaje = 'Entraste desde otro lugar';
-            }
-
-            alert(mensaje);
-            bloqueAnterior = color;
+        div {
+            width: 100px;
+            height: 100px;
         }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var rojo = document.getElementById('c1');
+            var blanco = document.getElementById('c2');
+            var azul = document.getElementById('c3');
+            blanco.addEventListener('mouseover', function (event) {
+                if (event.relatedTarget === rojo) {
+                    alert('Entraste desde el bloque rojo');
+                }
+                else if (event.relatedTarget === azul) {
+                    alert('Entraste desde el bloque azul');
+                }
+                else {
+                    alert('Entraste desde otro lugar');
+                }
+            });
+        });
     </script>
 </head>
 <body>
-    <div id="c1" style="background: red" onmouseover="detectarEntrada('rojo')"></div>
-    <div id="c2" style="background: white" onmouseover="detectarEntrada('blanco')"></div>
-    <div id="c3" style="background: blue" onmouseover="detectarEntrada('azul')"></div>
+<div id="c1" style="background: red"></div>
+<div id="c2" style="background: white"></div>
+<div id="c3" style="background: blue"></div>
 </body>
 </html>
