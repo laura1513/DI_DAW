@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{ width: 100px; height:100px;}
+    </style>
+    <script type="text/javascript">
+        let bloqueAnterior = '';
+
+        function detectarEntrada(color) {
+            let mensaje = '';
+
+            if (bloqueAnterior === 'rojo' && color === 'blanco') {
+                mensaje = 'Entraste desde el bloque rojo al bloque blanco';
+            } else if (bloqueAnterior === 'azul' && color === 'blanco') {
+                mensaje = 'Entraste desde el bloque azul al bloque blanco';
+            } else {
+                mensaje = 'Entraste desde otro lugar';
+            }
+
+            alert(mensaje);
+            bloqueAnterior = color;
+        }
+    </script>
+</head>
+<body>
+    <div id="c1" style="background: red" onmouseover="detectarEntrada('rojo')"></div>
+    <div id="c2" style="background: white" onmouseover="detectarEntrada('blanco')"></div>
+    <div id="c3" style="background: blue" onmouseover="detectarEntrada('azul')"></div>
+</body>
+</html>
