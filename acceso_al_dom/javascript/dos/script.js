@@ -1,8 +1,8 @@
 function imageSelected() {
-    $("img").click( function () {
-        $("img").css("border-width", "0");
-        $("img").css("opacity", 0.4);
-        $(this).css('border', "solid 3px pink");
-        $(this).css('opacity', 1);
+    document.querySelector("img").click( function () {
+        document.querySelector("img").css("border-width", "0");
+        document.querySelector("img").css("opacity", 0.4);
+        document.querySelector(this).css('border', "solid 3px pink");
+        document.querySelector(this).css('opacity', 1);
     });
 }

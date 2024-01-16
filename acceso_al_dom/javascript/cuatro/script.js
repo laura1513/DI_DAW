@@ -1,19 +1,19 @@
-$(document).ready(function(){
-    $("#ocultar").click(function(){
-        $("img").fadeTo(0, 0.1);
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector("#ocultar").click(function(){
+        document.querySelector("img").fadeTo(0, 0.1);
     });
-    $("img").click(function(){
-        $(this).fadeTo(0, 0.1);
+    document.querySelector("img").click(function(){
+        document.querySelector(this).fadeTo(0, 0.1);
     });
-    $("#mostrar").click(function () {
+    document.querySelector("#mostrar").click(function () {
 
-        $("#img1").fadeTo(0, 1);
-        $("#img2").fadeTo(1000, 1);
-        $("#img3").fadeTo(2000, 1);
-        $("#img4").fadeTo(3000, 1);
-        $("#img5").fadeTo(4000, 1);
-        $("#img6").fadeTo(5000, 1);
-        $("#img7").fadeTo(6000, 1);
-        $("#img8").fadeTo(7000, 1);
+        document.querySelector("#img1").fadeTo(0, 1);
+        document.querySelector("#img2").fadeTo(1000, 1);
+        document.querySelector("#img3").fadeTo(2000, 1);
+        document.querySelector("#img4").fadeTo(3000, 1);
+        document.querySelector("#img5").fadeTo(4000, 1);
+        document.querySelector("#img6").fadeTo(5000, 1);
+        document.querySelector("#img7").fadeTo(6000, 1);
+        document.querySelector("#img8").fadeTo(7000, 1);
     });
 });
