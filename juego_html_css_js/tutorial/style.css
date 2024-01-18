@@ -1,0 +1,22 @@
+div {
+    width: 590px;
+    background-color: #071254;
+    color: white;
+    margin-bottom: 2px;
+    padding: 5px;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+#mensaje {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#puntuacion, #mensaje {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+    color: #0F0;
+}
