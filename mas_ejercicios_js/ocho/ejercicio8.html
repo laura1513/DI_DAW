@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8</title>
+    <style>
+        #contador-caracteres {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+<label for="texto">Ingresa texto (máximo 100 caracteres):</label><br>
+<textarea id="texto" rows="4" cols="50" oninput="contador()" onkeydown="controlarCaracteres(event)"></textarea>
+<div id="contador">Caracteres restantes: <span id="restantes">100</span></div>
+</body>
+</html>

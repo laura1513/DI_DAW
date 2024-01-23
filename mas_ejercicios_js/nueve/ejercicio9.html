@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+<form id="formulario1" onsubmit="return validarFormulario1();">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" class="requerido texto" /><br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" class="requerido texto" /><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" class="requerido" /><br>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="text" id="correo" name="correo" class="requerido" /><br>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" class="requerido" /><br>
+    <input type="submit" value="Enviar form1" /><br>
+</form>
+<p>******************************************</p>
+<form id="formulario2" onsubmit="return validarFormulario2();">
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" class="requerido texto" /><br>
+
+    <label for="codigoPostal">Código Postal:</label>
+    <input type="text" id="codigoPostal" name="codigoPostal" class="requerido" /><br>
+
+    <label for="localidad">Localidad:</label>
+    <input type="text" id="localidad" name="localidad" class="requerido texto" /><br>
+
+    <label for="provincia">Provincia:</label>
+    <input type="text" id="provincia" name="provincia" class="requerido texto" /><br>
+
+    <input type="submit" value="Enviar form2" /><br>
+</form>
+</body>
+</html>

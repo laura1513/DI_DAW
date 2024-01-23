@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        .zone {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        #rojo { background-color: #f86060; }
+        #amarillo { background-color: #f8d960; }
+        #azul { background-color: #6090f8; }
+        #verde { background-color: #93f860; }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="rojo" class="zone" onclick="mostrarColor('rojo')"></div>
+<div id="amarillo" class="zone" onclick="mostrarColor('amarillo')"></div>
+<div id="azul" class="zone" onclick="mostrarColor('azul')"></div>
+<div id="verde" class="zone" onclick="mostrarColor('verde')"></div>
+</body>
+</html>

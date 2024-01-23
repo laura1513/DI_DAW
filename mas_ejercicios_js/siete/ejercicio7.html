@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+    <script src="script.js"></script>
+    <style type="text/css">
+        input {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="numeros" onkeypress="return permite(event, 'num')" placeholder="solo números"/>
+<br>
+<input type="text" id="letras" onkeypress="return permite(event, 'car')" placeholder="solo letras"/>
+<br>
+<input type="text" id="ambos" onkeypress="return permite(event, 'num_car')" placeholder="solo letras o números"/>
+</body>
+</html>
