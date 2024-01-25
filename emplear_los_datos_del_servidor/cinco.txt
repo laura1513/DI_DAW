@@ -31,11 +31,14 @@ function myFunction(xml) {
   const x = xmlDoc.getElementsByTagName("CD");
   let table="<tr><th>Artist</th><th>Title</th></tr>";
   for (let i = 0; i <x.length; i++) {
-    table += "<tr><td style='color: red; background-color:black;'>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td style='color: black; background-color:red;'>" +
-    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    "</td></tr>";
+    const artist = x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+    if (artist.startsWith('S')) {
+      table += "<tr><td>" +
+        artist +
+        "</td><td>" +
+        x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+        "</td></tr>";
+    }
   }
   document.getElementById("demo").innerHTML = table;
 }
