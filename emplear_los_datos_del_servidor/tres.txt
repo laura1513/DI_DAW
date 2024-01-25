@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>The XMLHttpRequest Object</h2>
+        <p>The getAllResponseHeaders() function returns all the header information of a resource, like length, server-type, content-type, last-modified, etc:</p>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <script>
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                const txt = document.getElementById("demo");
+                txt.innerHTML = this.getAllResponseHeaders();
+                const headers = this.getAllResponseHeaders();
+                comprobar(headers);
+            }
+            xhttp.open("GET", "ajax_info.txt");
+            xhttp.send();
+            function comprobar(headers) {
+                const lines = headers.split('\n');
+                let maxAge = 0;
+                for (const line of lines) {
+                    if (line.toLowerCase().startsWith('cache-control')) {
+                    const maxAgeMatch = line.match(/max-age=(\d+)/);
+                    if (maxAgeMatch) {
+                        maxAge = parseInt(maxAgeMatch[1]);
+                        break;
+                    }
+                    }
+                }
+                if (maxAge < 10000) {
+                    document.getElementById("demo2").innerHTML = "Correcto";
+                } else {
+                    document.getElementById("demo2").innerHTML = "Incorrecto";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .color1 { color: red; }
+      .color2 { color: blue; }
+      .color3 { color: green; }
+    </style>
+  </head>
+  <body>
+    <div id="demo">
+      <h2>The XMLHttpRequest Object</h2>
+      <button type="button" onclick="loadDoc('ajax_info.txt', myFunction)">Change Content</button>
+    </div>
+
+    <script>
+      function loadDoc(url, xFunction) {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function() { xFunction(this); }
+        xhttp.open("GET", url);
+        xhttp.send();
+      }
+      function myFunction(xhttp) {
+        const lines = xhttp.responseText.split('\n');
+        let htmlContent = '';
+        lines.forEach((line, index) => {
+          htmlContent += `<h1 class="${"color" + index}">${line}</h1>`;
+        });
+        document.getElementById("demo").innerHTML = htmlContent;
+      }
+    </script>
+  </body>
+</html>
