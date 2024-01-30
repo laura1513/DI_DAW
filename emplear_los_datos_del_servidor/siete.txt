@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<style>
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<form>
+  <input type="text" id="searchInput" placeholder="Search for a customer...">
+  <button type="button" onclick="searchCustomer('searchInput')">Search</button>
+</form>
+<br>
+<div id="txtHint">Customer info will be listed here...</div>
+
+<script>
+function searchCustomer(str) {
+
+  if (str === "") {
+    document.getElementById("txtHint").innerHTML = "Please enter a customer name.";
+    return;
+  }
+
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    const response = this.responseText.trim();
+
+    if (response === "") {
+      document.getElementById("txtHint").innerHTML = "La empresa buscada no existe.";
+    } else {
+      document.getElementById("txtHint").innerHTML = response;
+    }
+  };
+
+  xhttp.open("GET", "getcustomer.php?q=" + str);
+  xhttp.send();
+}
+</script>
+</body>
+</html>
