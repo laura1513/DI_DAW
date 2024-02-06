@@ -5,12 +5,12 @@ body{
     //Utiliza la variable "font-weights" "font-size" y "font-family-cuerpo"
     font: map-get($font-weights,"regular") $font-size $font-family-cuerpo;
     margin: 0 auto;
-    //Variables del tamaño especificadas en el archivo _variables
+    //Variables del tamaño especificadas en el archivo.txt _variables
     max-width: $max-width;
     min-width: $min-width;
 }
 
-//Utiliza el selector fuente-titulos del archivo _variables.scss importado anterormente
+//Utiliza el selector fuente-titulos del archivo.txt _variables.scss importado anterormente
 @include fuente-titulos;
 
 header{
@@ -31,7 +31,7 @@ header{
 }
 
 nav ul {
-    //Utiliza el selector ul-horizontal del archivo _variables.scss importado anterormente
+    //Utiliza el selector ul-horizontal del archivo.txt _variables.scss importado anterormente
     @include ul-horizontal;
     margin: 0.5rem 0 0 0;
     text-align: center;
