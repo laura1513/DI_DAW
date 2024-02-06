@@ -1,0 +1,10 @@
+var http = require('http');
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    function mostrarMensaje() {
+        for (let i = 0; i < 10; i++) {
+            console.log("Node.js es muy chulo " + i);
+        }
+    }
+    res.end(mostrarMensaje());
+}).listen(8080);
